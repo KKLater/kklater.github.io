@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      关于AssetsLibrary和PhotosKit
+title:      "关于AssetsLibrary和PhotosKit"
 date:       2016-07-29 17:48
 summary:    关于AssetsLibrary和PhotosKit
 categories: jekyll pixyll
 ---
-
+---
 随着iOS不断的升级，苹果逐步放弃了AssetsLibrary，提供了新的框架Photos。
 
 以下是`AssetsLibrary`与`Photos`的对比：
