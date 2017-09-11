@@ -10,7 +10,9 @@ tail:
 ---
 ---
 `Lightweight Generics` 轻量级泛型，纯编译器的语法支持，不借助任何objc runtime的升级。即，完全向下兼容（兼容更低的iOS版本）。
+
 ###带泛型的容器
+
 之前使用容器时，常用写法：
 ```objc
  NSArray * strings = @[@"Hello",@"word"];
@@ -23,7 +25,9 @@ tail:
     NSLog(@"first = %@",first);//Hello
 }];
 ```
+
 ###引入泛型之后的容器
+
 ```objc
  NSArray<NSString *> * strings = @[@"Hello",@"word"];
 ```
@@ -87,7 +91,9 @@ tail:
 我们发现，红色的错误提醒又出现了...
 那么为什么指定了`NSString`泛型的，重新指定`NSMutableString`可以，反过来就错了？
 我们发现，其实`NSMutableString`是`NSString`的子类！
+
 ###协变性和逆变性
+
 我们再来讨论一个有意思的事情。`FBTObject`不指定泛型类型的情况下，我定义了三个`FBTObject`对象：
 ```objc
         FBTObject *fbt = [[FBTObject alloc] init];
