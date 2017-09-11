@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About Pixyll
+title: 关于
 permalink: /about/
 tags: about
 ---
