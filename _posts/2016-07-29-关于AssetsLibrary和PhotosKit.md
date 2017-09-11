@@ -60,7 +60,7 @@ if (authorizationStatus == ALAuthorizationStatusRestricted || authorizationStatu
 
 PhotosKit获取资源权限：
 
-```objective-c
+```Objective-c
 + (void)fbt_libraryAuthorizationCompleted:(void(^)(BOOL))completed {
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
   	//直接询问用户使用权限状态
