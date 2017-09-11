@@ -1,5 +1,7 @@
-<footer class="footer">
-	<div class="col">
-		© 2014-2016 {{ site.title }} | <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="subscribe">RSS</a>
-	</div>
+<footer class="footer {% if site.scrollappear_enabled %}appear{% endif %}">
+  <p>
+    Chalk is a high quality, completely customizable, performant and 100% free
+    blog template for Jekyll built by
+    <a href="{{ 'about' | relative_url }}" title="About me">Nielsen Ramon</a>. Download it <a href="https://github.com/nielsenramon/chalk" rel="noreferrer noopener" target="_blank" title="Download Chalk">here</a>.
+  </p>
 </footer>
