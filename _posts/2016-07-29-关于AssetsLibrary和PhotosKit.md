@@ -62,6 +62,7 @@ AssetsLibrary获取资源权限：
 PhotosKit获取资源权限：
 
 ```objc
+aa
 + (void)fbt_libraryAuthorizationCompleted:(void(^)(BOOL))completed {
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
   	//直接询问用户使用权限状态
