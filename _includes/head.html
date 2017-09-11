@@ -1,39 +1,28 @@
+<!DOCTYPE html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="songroger">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/logo.png">
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | xml_escape | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | xml_escape | strip_html | strip_newlines }}{% endif %}">
+    <meta name="keywords" content="WngLMng, wangliming, 王立明">
+    <meta name="author" content="WngLMng">
+    <meta name="description" content="{{ site.description }}">
 
-  <!-- Open graph data -->
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-  <meta property="og:url" content="{% if page.title %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-  <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | xml_escape | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | xml_escape | strip_html | strip_newlines }}{% endif %}">
+    <meta property="og:site_name" content="WngLMng's Blog — 一个写代码的">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <!-- Standard Stuff -->
-  <link rel="canonical" href="{% if page.title %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}"/>
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
+    <!--   Core CSS Files   -->
+    <link href="//cdn.bootcss.com/flex-layout-attribute/1.0.3/css/flex-layout-attribute.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="{{ site.favicon }}">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-config" content="/assets/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- Styles -->
-  {% if site.basecss %}
-    <link rel="stylesheet" href="{{ site.basecss }}">
-  {% else %}
-    <style type="text/css">
-      {% include css/main.css %}
-    </style>
-  {% endif %}
-
-
+    <!-- Canonical SEO -->
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 </head>

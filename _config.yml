@@ -1,38 +1,26 @@
-# Site configuration
-domain: "http://songroger.win"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.lshxin.com" # the base hostname & protocol for your site
-permalink: /:title/
-avatar: http://ouo0w16s7.bkt.clouddn.com/IMG_0754.JPG?e=1505118402&token=tYezop22TZHJ2SRLGu2c2pc_DIsOrZZ3JfZjeV5-:c2MkMIWAfzw5pPmwPci1MjBW0u4
-about: http://7xof48.com1.z0.glb.clouddn.com/about.jpg
-favicon: https://github.com/KKLater/kklater.github.io/blob/master/_src/images/favicon.png
-basecss:
-# Theme specific configuration
-title: 小池的博客
-description: >
-  Hi there, My name is Luozhan.Song, usually I use "songroger" as my ID everywhere.
-  I was born and raised in Hunan China.
-  I'm really fond of beautiful design, drawing etc.
+# Basic
+title: WngLMng's Blog
+author: WngLMng
+description: 嗨，我是王立明，一名来自黑龙江省鹤岗市的男生。<br/>现于无线生活（北京），从事互联网开发工作。
 
-# Contact and social media links
-# twitter_username: songrogero
-github_username: KKLater
-# facebook_username: song.roger.1
-# instagram_username: songroger198
-# linkedin_username: songroger
+url: "http://www.lshxin.com"
 
-exclude: ['node_modules', 'gulpfile.js', 'package.json']
+permalink: /:year/:month/:title/
 
-kramdown:
-  input: GFM
-highlighter: rouge
-# If U enable the comment, edit disqus or duoshuo account
-# before deploy your webpage
-enable_comment: false
-# disqus_account: songroger
-
-gems: ['jekyll-paginate']
+# Format
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: [fenced_code_blocks,no_intra_emphasis,strikethrough,no_intra_emphasis,autolink,tables]
+  
 # Pagination
-paginate: 3
-paginate_path: page:num
+gems: [jekyll-paginate]
+paginate: 15
+paginate_path: "pages/:num/"
 
+# Social
+social:
+    weibo: sunmoon1993
+    github: wnglmng
+    gplus: 112547382138552250597
+    mail: wnglmng@gmail.com
