@@ -1,9 +1,6 @@
 ---
 layout: page
-title: 关于
-permalink: /about/
-tags: about
+title: About
 ---
-
-
-About Pixyll
+{{ site.description }}
+![Songroger]({{ site.about }})

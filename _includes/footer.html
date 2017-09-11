@@ -1,14 +1,5 @@
-<footer class="center">
-    <div class="measure">
-        <small>
-      大白博客 | 2017 © CopyRight
-    </small>
-    </div>
+<footer class="footer">
+	<div class="col">
+		© 2014-2016 {{ site.title }} | <a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="subscribe">RSS</a>
+	</div>
 </footer>
-{% if site.enable_anchorjs %}
-<!-- AnchorJS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.0.0/anchor.min.js"></script>
-<script>
-    anchors.options.visible = 'always';
-    anchors.add('article h2, article h3, article h4, article h5, article h6');
-</script>{% endif %}

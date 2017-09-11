@@ -1,14 +1,24 @@
-<header class="site-header px2 px-responsive">
-  <div class="mt2 wrap">
-    <div class="measure">
-      <a href="{{ site.url }}" class="site-title">{{ site.title }}</a>
-      <nav class="site-nav">
-        {% include navigation.html %}
-      </nav>
-      <div class="clearfix"></div>
-      {% if site.show_social_icons %}
-        {% include social_links.html %}
-      {% endif %}
-    </div>
-  </div>
-</header>
+  <header class="header">
+
+    {% if site.avatar %}
+      <div class="header__logo">
+        <a href="{{ site.baseurl }}/" class="header__link--logo">
+        <!-- <div class="spinner"></div> -->
+        <img src="{{ site.avatar }}"></a>
+      </div>
+    {% else %}
+      <h1 class="header__logo">
+        <a href="{{ site.baseurl }}/" class="header__link--logo">{{ site.title }}</a>
+      </h1>
+    {% endif %}
+
+    <nav class="header__nav" role="navigation">      
+      <a href="{{ site.baseurl }}/archive/" class="header__link">Archive</a>
+      <a href="http://twitter.com/{{ site.twitter_username }}" class="header__link" target="_blank">Twitter</a>
+      <!-- <a href="http://github.com/{{ site.github_username }}" class="header__link" target="_blank">Github</a> -->
+      <a href="http://facebook.com/{{ site.facebook_username }}" class="header__link" target="_blank">Facebook</a>
+      <a href="{{ site.baseurl }}/about/" class="header__link">About</a>
+    </nav>
+  </header>
+
+  <main class="col">
