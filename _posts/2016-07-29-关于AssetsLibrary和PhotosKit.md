@@ -46,21 +46,21 @@ categories: jekyll pixyll
 AssetsLibrary获取资源权限：
 
 ```objective-c
-NSString *tipTextWhenNoPhotosAuthorization; // 提示语
-// 获取当前应用对照片的访问授权状态
-ALAuthorizationStatus authorizationStatus = [ALAssetsLibrary authorizationStatus];
-// 如果没有获取访问授权，或者访问授权状态已经被明确禁止，则显示提示语，引导用户开启授权
-if (authorizationStatus == ALAuthorizationStatusRestricted || authorizationStatus == ALAuthorizationStatusDenied) {
-    NSDictionary *mainInfoDictionary = [[NSBundle mainBundle] infoDictionary];
-    NSString *appName = [mainInfoDictionary objectForKey:@"CFBundleDisplayName"];
-    tipTextWhenNoPhotosAuthorization = [NSString stringWithFormat:@"请在设备的\"设置-隐私-照片\"选项中，允许%@访问你的手机相册", appName];
-    // 展示提示语
-}
+    NSString *tipTextWhenNoPhotosAuthorization; // 提示语
+    // 获取当前应用对照片的访问授权状态
+    ALAuthorizationStatus authorizationStatus = [ALAssetsLibrary authorizationStatus];
+    // 如果没有获取访问授权，或者访问授权状态已经被明确禁止，则显示提示语，引导用户开启授权
+    if (authorizationStatus == ALAuthorizationStatusRestricted || authorizationStatus == ALAuthorizationStatusDenied) {
+        NSDictionary *mainInfoDictionary = [[NSBundle mainBundle] infoDictionary];
+        NSString *appName = [mainInfoDictionary objectForKey:@"CFBundleDisplayName"];
+        tipTextWhenNoPhotosAuthorization = [NSString stringWithFormat:@"请在设备的\"设置-隐私-照片\"选项中，允许%@访问你的手机相册", appName];
+        // 展示提示语
+    }
 ```
 
 PhotosKit获取资源权限：
 
-```Objective-c
+```objective-c
 + (void)fbt_libraryAuthorizationCompleted:(void(^)(BOOL))completed {
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
   	//直接询问用户使用权限状态
