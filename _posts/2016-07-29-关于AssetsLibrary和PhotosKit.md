@@ -45,6 +45,13 @@ categories: jekyll pixyll
 
 AssetsLibrary获取资源权限：
 
+```html
+<h1>hhhhh</h1>
+<body>
+
+</body>
+```
+
 ```objective-c
     NSString *tipTextWhenNoPhotosAuthorization; // 提示语
     // 获取当前应用对照片的访问授权状态
