@@ -1,31 +1,26 @@
-# Permalinks
-permalink:      /:year-:month-:day/:title
+# Basic
+title: Later's Blog
+author: Later
+description:  hahah # 嗨，我是王立明，一名来自黑龙江省鹤岗市的男生。<br/>现于无线生活（北京），从事互联网开发工作。
 
-# Setup
-title:          Later
-paginate:       10
-baseurl:        ""
-url:            "http://www.lshxin.com"
+url: "http://www.lshxin.com"
 
-# Assets
-sass:
-  sass_dir:     _sass
-  style:        :compressed
+permalink: /:year/:month/:title/
 
-# Build settings
-markdown:       kramdown
+# Format
+highlighter: plain
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", tables]
 
-# About
-author:
-  name:         Chester How
-  url:          http://chester.how
-  email:        chesterhow@gmail.com
+# Pagination
+gems: [jekyll-paginate]
+paginate: 15
+paginate_path: "pages/:num/"
 
-# Custom vars
-version:        3.4.1
-github:
-  repo:         https://github.com/chesterhow/tale
-
-# Gems
-gems:
-  - jekyll-paginate
+# Social
+social:
+    weibo: sunmoon1993
+    github: wnglmng
+    gplus: 112547382138552250597
+    mail: wnglmng@gmail.com
