@@ -1,26 +1,37 @@
-# Basic
-title: Later's Blog
-author: Later
-description:  hahah # 嗨，我是王立明，一名来自黑龙江省鹤岗市的男生。<br/>现于无线生活（北京），从事互联网开发工作。
+# Site configuration
+domain: "http://songroger.win"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://www.lshxin.com" # the base hostname & protocol for your site
+permalink: /:title/
+avatar: http://7xof48.com1.z0.glb.clouddn.com/avatar.jpg
+about: http://7xof48.com1.z0.glb.clouddn.com/about.jpg
+favicon: http://7xof48.com1.z0.glb.clouddn.com/favicon.png
+basecss: 
+# Theme specific configuration
+title: songroger
+description: >
+  Hi there, My name is Luozhan.Song, usually I use "songroger" as my ID everywhere.
+  I was born and raised in Hunan China. 
+  I'm really fond of beautiful design, drawing etc.
 
-url: "http://www.lshxin.com"
+# Contact and social media links
+twitter_username: songrogero
+github_username: songroger
+facebook_username: song.roger.1
+instagram_username: songroger198
+linkedin_username: songroger
 
-permalink: /:year/:month/:title/
+exclude: ['node_modules', 'gulpfile.js', 'package.json']
 
-# Format
-highlighter: plain
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", tables]
+kramdown:
+  input: GFM
+highlighter: rouge
+# If U enable the comment, edit disqus or duoshuo account
+# before deploy your webpage
+enable_comment: false
+# disqus_account: songroger
 
+gems: ['jekyll-paginate']
 # Pagination
-gems: [jekyll-paginate]
-paginate: 15
-paginate_path: "pages/:num/"
-
-# Social
-social:
-    weibo: sunmoon1993
-    github: wnglmng
-    gplus: 112547382138552250597
-    mail: wnglmng@gmail.com
+paginate: 5
+paginate_path: /archive/page:num
