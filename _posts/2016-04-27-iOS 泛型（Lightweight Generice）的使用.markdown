@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "iOS 泛型（Lightweight Generice）的使用"
-date:   2016年4月27日 下午9:30 +0800
+date:   2016年4月27日 21:30 
 categories: iOS, Objective-c
 author: Later
 location: 北京, 中国
