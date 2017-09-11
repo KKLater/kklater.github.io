@@ -46,7 +46,7 @@ categories: jekyll pixyll
 AssetsLibrary获取资源权限：
 
 
-```objectivec
+```objc
     NSString *tipTextWhenNoPhotosAuthorization; // 提示语
     // 获取当前应用对照片的访问授权状态
     ALAuthorizationStatus authorizationStatus = [ALAssetsLibrary authorizationStatus];
@@ -61,7 +61,7 @@ AssetsLibrary获取资源权限：
 
 PhotosKit获取资源权限：
 
-```objectivec
+```objc
 + (void)fbt_libraryAuthorizationCompleted:(void(^)(BOOL))completed {
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
   	//直接询问用户使用权限状态
@@ -118,7 +118,7 @@ PhotosKit获取资源权限：
 
 AssetsLibrary获取相册资源：
 
-```objectivec
+```objc
 _assetsLibrary = [[ALAssetsLibrary alloc] init];
 _albumsArray = [[NSMutableArray alloc] init];
 [_assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
@@ -143,7 +143,7 @@ _albumsArray = [[NSMutableArray alloc] init];
 
 AssetsLibraby 通过
 
-```objectivec
+```objc
 - (void)enumerateGroupsWithTypes:(ALAssetsGroupType)types usingBlock:(ALAssetsLibraryGroupsEnumerationResultsBlock)enumerationBlock failureBlock:(ALAssetsLibraryAccessFailureBlock)failureBlock;
 ```
 
@@ -151,7 +151,7 @@ AssetsLibraby 通过
 
 PhotoKit获取相册资源就没有这么直接了，其过滤原则也是灵活的多。以获取照片“相机胶卷”相册为例：
 
-```objectivec
+```objc
 //获取相机胶卷
 PHFetchResult  *cameraFetch = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeSmartAlbumUserLibrary options:nil];
 PHAssetCollection *assetCollection  = [cameraFetch lastObject];
@@ -188,7 +188,7 @@ PhotosKit通过`+ (PHFetchResult<PHAssetCollection *> *)fetchAssetCollectionsWit
 
 AssetLibrary获取照片资源
 
-```objectivec
+```objc
 _imagesAssetArray = [[NSMutableArray alloc] init];
 [assetsGroup enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
     if (result) {
@@ -201,7 +201,7 @@ _imagesAssetArray = [[NSMutableArray alloc] init];
 
 获取照片资源详细信息
 
-```objectivec
+```objc
 // 获取资源图片的详细资源信息，其中 imageAsset 是某个资源的 ALAsset 对象
 ALAssetRepresentation *representation = [imageAsset defaultRepresentation];
 // 获取资源图片的 fullScreenImage
@@ -210,7 +210,7 @@ UIImage *contentImage = [UIImage imageWithCGImage:[representation fullScreenImag
 
 PhotosKit获取照片资源：
 
-```objectivec
+```objc
 //options：用于对照片的过滤，设置type、排序等
 PHFetchResult *fetchR    = [PHAsset fetchAssetsInAssetCollection:assetCollection options:[self _fbt_options]];
 //fetchR对象内则为PHAsset对象
