@@ -1,85 +1,69 @@
-# Refer to https://github.com/plusjade/jekyll-bootstrap/blob/master/Rakefile
+drafts_dir = '_drafts'
+posts_dir  = '_posts'
 
-require "rubygems"
-require 'rake'
-require 'yaml'
-require 'time'
-
-SOURCE = "."
-CONFIG = {
-  'posts' => File.join(SOURCE, "_posts"),
-  'drafts' => File.join(SOURCE, "_drafts"),
-  'post_ext' => "md",
-}
-
-# Usage: rake post title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]]
-desc "Begin a new post in #{CONFIG['posts']}"
-task :post do
-  abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  title = ENV["title"] || "new-post"
-  tags = ENV["tags"] || "[]"
-  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-  begin
-    date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
-  rescue => e
-    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
-    exit -1
+# rake post['my new post']
+desc 'create a new post with "rake post[\'post title\']"'
+task :post, :title do |t, args|
+  if args.title
+    title = args.title
+  else
+    puts "Please try again. Remember to include the filename."
   end
-  filename = File.join(CONFIG['posts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
-  if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
-  end
-
+  mkdir_p "#{posts_dir}"
+  filename = "#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.downcase.gsub(/[^\w]+/, '-')}.md"
   puts "Creating new post: #{filename}"
-  open(filename, 'w') do |post|
-    post.puts "---"
-    post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts 'description: ""'
-    post.puts "date: #{date}"
-    post.puts "tags: #{tags}"
-    post.puts "comments: true"
-    post.puts "---"
-  end
-end # task :post
+  File.open(filename, "w") do |f|
+    f << <<-EOS.gsub(/^    /, '')
+    ---
+    layout: post
+    title: #{title}
+    date: #{Time.new.strftime('%Y-%m-%d %H:%M')}
+    categories:
+    ---
 
-# Usage: rake draft title="A Title" [date="2012-02-09"] [tags=[tag1,tag2]]
-desc "Begin a new post in #{CONFIG['drafts']}"
-task :draft do
-  abort("rake aborted: '#{CONFIG['drafts']}' directory not found.") unless FileTest.directory?(CONFIG['drafts'])
-  title = ENV["title"] || "new-draft"
-  tags = ENV["tags"] || "[]"
-  slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
-  begin
-    date = (ENV['date'] ? Time.parse(ENV['date']) : Time.now).strftime('%Y-%m-%d')
-  rescue => e
-    puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
-    exit -1
-  end
-  filename = File.join(CONFIG['drafts'], "#{date}-#{slug}.#{CONFIG['post_ext']}")
-  if File.exist?(filename)
-    abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    EOS
   end
 
-  puts "Creating new drafts: #{filename}"
-  open(filename, 'w') do |draft|
-    draft.puts "---"
-    draft.puts "layout: post"
-    draft.puts "title: \"#{title.gsub(/-/,' ')}\""
-    draft.puts 'description: ""'
-    draft.puts "date: #{date}"
-    draft.puts "tags: #{tags}"
-    draft.puts "comments: true"
-    draft.puts "---"
+# Uncomment the line below if you want the post to automatically open in your default text editor
+#  system ("#{ENV['EDITOR']} #{filename}")
+end
+
+# usage: rake draft['my new draft']
+desc 'create a new draft post with "rake draft[\'draft title\']"'
+task :draft, :title do |t, args|
+  if args.title
+    title = args.title
+  else
+    puts "Please try again. Remember to include the filename."
   end
-end # task :draft
+  mkdir_p "#{drafts_dir}"
+  filename = "#{drafts_dir}/#{title.downcase.gsub(/[^\w]+/, '-')}.md"
+  puts "Creating new draft: #{filename}"
+  File.open(filename, "w") do |f|
+    f << <<-EOS.gsub(/^    /, '')
+    ---
+    layout: post
+    title: #{title}
+    date: #{Time.new.strftime('%Y-%m-%d %H:%M')}
+    categories:
+    ---
 
-desc "Install Jekyll Plugins"
-task :geminstall do
-  system "sudo gem install jekyll-seo-tag jekyll-paginate jekyll-admin"
-end # task :geminstall
+    EOS
+  end
 
-desc "Launch preview environment"
+# Uncomment the line below if you want the draft to automatically open in your default text editor
+# system ("#{ENV['EDITOR']} #{filename}")
+end
+
+desc 'preview the site with drafts'
 task :preview do
-  system "jekyll serve --incremental"
-end # task :preview
+  puts "## Generating site"
+  puts "## Stop with ^C ( <CTRL>+C )"
+  system "jekyll serve --watch --drafts"
+end
+
+desc 'list tasks'
+task :list do
+  puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
+  puts "(type rake -T for more detail)\n\n"
+end

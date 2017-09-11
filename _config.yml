@@ -1,93 +1,132 @@
-# # # # # # # # # # # # #
-#   K i k o - p l u s   #
-# # # # # # # # # # # # #
+# Site settings
+title:       Pixyll
+email:       your_email@example.com
+author:      John Otander
+description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+baseurl:     ""
+url:         "http://pixyll.com"
+date_format: "%b %-d, %Y"
+header_pages:
+ - about.md
+ - contact.html
 
-# Basic
-name:               "Later"
+# Google services
+google_verification:
+# Use either direct GA implementation or set up GTM account
+# - using both will skew your data (leave blank to not use at all)
+google_analytics:
+google_tag_manager:
+# Bing services
+bing_verification:
 
-# author:
-  # facebook:         your-id
-  # youtubeUser:      your-id
-  # youtubeChannel:   your-id
-  # twitter:          your-id
-  # github:           your-id
-  # stackoverflow:    your-id
-  # quora:            your-id
-  # linkedin:         your-id
-  # pinterest:        your-id
-  # googlePlus:       your-id
-  # instagram:        your-id
-  # reddit:           your-id
-  # medium:           your-id
-  # tumblr:           your-id
-  # email:            your-id@your-email.com
+# Optional features
+animated:             false
+show_related_posts:   false
+show_post_footers:    false
+show_social_icons:    false
+ajaxify_contact_form: false
+enable_mathjax: false
+extended_fonts: false
+enable_anchorjs: false
+# Preview image for social media aka og:image and twitter:image
+post_preview_image: false
 
-copyright:
-  year:             2017
-  name:             Later
+# Facebook Page integration
+# (for instant articles and other stuff)
+fb_page: false
+fb_page_id:
 
-# Google-analytics
-google-analytics:
-  id:               ""
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname:
 
-# Disqus
-disqus:
-  id:               "Later"
+# txtpen post comments
+# (leave blank to disable txtpen)
+txtpen_sitename:
 
-# URL
-url:                "https://kklater.github.io" # the base hostname & protocol for your site
-# url:                "http://localhost:4000" # use this url when you develop
-baseurl:            "" # the subpath of your site, e.g. /blog
+# Facebook Comments plugin
+# (leave blank to disable Facebook Comments, otherwise set it to true)
+facebook_comments:
+facebook_appid:
+facebook_comments_number: 10
 
+# Social icons
+github_username:
+reddit_username:
+bitbucket_username:
+stackoverflow_id:
+twitter_username:
+skype_username:
+steam_nickname:
+google_plus_id:
+linkedin_username:
+angellist_username:
+medium_id:
+bitcoin_url:
+paypal_url:
+flattr_button:
+telegram_username:
+vk_id:
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:           Asia/Beijing
-permalink:          /:year-:month-:day/:title/
+# Post sharing icons
+show_sharing_icons: false
+# Change to 'true' to enable individual icons
+share_facebook: false
+share_twitter: false
+share_googleplus: false
+share_linkedin: false
+share_digg: false
+share_tumblr: false
+share_reddit: false
+share_stumbleupon: false
+share_hackernews: false
 
-# Pagination
-paginate:           5
-paginate_path:      /page:num/
+text:
+  pagination:
+    newer: 'Newer'
+    older: 'Older'
+  share_buttons:
+    text:         'Share this post!'
+    facebook:     'Share on Facebook'
+    twitter:      'Share on Twitter'
+    googleplus:   'Share on Google+'
+    linkedin:     'Share on LinkedIn'
+    digg:         'Share on Digg'
+    tumblr:       'Share on Tumblr'
+    reddit:       'Share on Reddit'
+    stumbleupon:  'Share on StumbleUpon'
+    hackernews:   'Share on Hacker News'
+  post:
+    updated:        'Updated'
+    minute_read:    'minute read'
+    related_posts:  'Related Posts'
+  index:
+    coming_soon: 'Coming soon...'
+  contact:
+    email:    'Email Address'
+    content:  'What would you like to say?'
+    subject:  'New submission!'
+    submit:   'Say Hello'
+    ajax:
+      sending:  'sending..'
+      sent:     'Message sent!'
+      error:    'Error!'
+  thanks: 'Thanks for contacting us. We will reply as soon as possible.'
+  og_locale: 'en_US'
 
-# Markdown
-markdown:           kramdown
-kramdown:
-  input:            GFM
-
-# Navigation
-nav:
-  - name:           "About"
-    url:            "/about"
-  - name:           "Archive"
-    url:            "/archive"
-  - name:           "Tags"
-    url:            "/tags"
-  - name:           "Github"
-    url:            "https://github.com/KKLater"
-
-# Sass
+# Build settings
+markdown:     kramdown
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink:    pretty
+paginate:     4
 sass:
-  sass_dir:         _sass
-  style:            :compressed
-
-# Scopes
-defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
-
-# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
-gems:
-  - jekyll-seo-tag
+  style: compressed
+plugins:
   - jekyll-paginate
-  - jekyll-admin
-
-exclude:            [vendor]
+  - jekyll-sitemap
+# https://github.com/jekyll/jekyll/issues/2938
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
