@@ -3,7 +3,7 @@ domain: "http://songroger.win"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.lshxin.com" # the base hostname & protocol for your site
 permalink: /:title/
-avatar: http://7xof48.com1.z0.glb.clouddn.com/avatar.jpg
+avatar: http://ouo0w16s7.bkt.clouddn.com/IMG_0754.JPG?e=1505118402&token=tYezop22TZHJ2SRLGu2c2pc_DIsOrZZ3JfZjeV5-:c2MkMIWAfzw5pPmwPci1MjBW0u4
 about: http://7xof48.com1.z0.glb.clouddn.com/about.jpg
 favicon: http://7xof48.com1.z0.glb.clouddn.com/favicon.png
 basecss: 
