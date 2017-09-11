@@ -1,7 +1,7 @@
 --- layout: default --- {% assign minutes = content | strip_html | number_of_words | divided_by: 180 %} {% if minutes == 0 %} {% assign minutes = 1 %} {% endif %}
 
 <div class="post-header mb2">
-    <h6>{{ page.title }}</h6>
+    <h1>{{ page.title }}</h1>
     <span class="post-meta">{{ page.date | date: site.date_format }}</span><br> {% if page.update_date %}
     <span class="post-meta">{{ site.text.post.updated }}: {{ page.update_date | date: site.date_format }}</span><br> {% endif %}
     <span class="post-meta small">
@@ -44,7 +44,7 @@
 {% for post in site.related_posts %}
 <div class="post ml2">
     <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-        <p class="post-title">{{ post.title }}</p>
+        <h4 class="post-title">{{ post.title }}</h4>
         <p class="post-summary">{{ post.summary }}</p>
     </a>
 </div>
