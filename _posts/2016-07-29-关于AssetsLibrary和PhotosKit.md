@@ -2,10 +2,9 @@
 layout:     post
 title:      关于AssetsLibrary和PhotosKit
 date:       2016-07-29
-summary:     
+summary:    关于AssetsLibrary和PhotosKit
 categories: jekyll pixyll
 ---
-
 
 |       | AssetsLibrary  | PhotosKit         |
 | ----- | -------------- | ----------------- |
