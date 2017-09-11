@@ -4,7 +4,7 @@ email:       lshxin89@126.com
 author:      Later
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
 baseurl:     ""
-url:         "https://kklater.github.io"
+url:         "http://www.lshxin.com"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
