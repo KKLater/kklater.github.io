@@ -1,13 +1,13 @@
 ---
 layout:         post
 title:          iOS 泛型（Lightweight Generice）的使用
-subtitle:       linux install maven
-card-image:     https://ww1.sinaimg.cn/large/906cb9dbgw1f9ilpmreqhj21kw0zk151.jpg
+subtitle:       Lightweight Generice
+card-image:  
+location:  北京 中国   
 date:           2016-04-27 21:30:00
-tags:           code
-post-card-type:  article
-description:  Lightweight Generics 轻量级泛型，纯编译器的语法支持，不借助任何objc runtime的升级。即，完全向下兼容（兼容更低的iOS版本）。
----
+categories: iOS
+tags:  Objective-c
+excerpt:  Lightweight Generics 轻量级泛型，纯编译器的语法支持，不借助任何objc runtime的升级。即，完全向下兼容（兼容更低的iOS版本）。
 ---
 `Lightweight Generics` 轻量级泛型，纯编译器的语法支持，不借助任何objc runtime的升级。即，完全向下兼容（兼容更低的iOS版本）。
 
@@ -15,22 +15,13 @@ description:  Lightweight Generics 轻量级泛型，纯编译器的语法支持
 
 之前使用容器时，常用写法：
 
-```objective-c
+```objc
  NSArray * strings = @[@"Hello",@"word"];
 ```
 
-```php
-<?php
-class TestHook{
-    function display(){
-          echo "Hello Hook";
-    }
-}
-?>
-```
 在使用时，例如调用
 
-```bjective-c
+```objc
 [strings enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
      //obj,  不涉及类型，需要自行转换类型
      NSString *first = (NSString *)obj;
@@ -177,7 +168,7 @@ class TestHook{
 子类型可以强制赋值给父类型了，我们竟然没有写强制转换！
 在声明时加上`__contravariant`试试呢？
 
-```objective-c
+```objc
     #import <Foundation/Foundation.h>
     @interface FBTObject<__contravariant ObjectType> : NSObject
     @property (nonatomic, readonly) NSMutableArray <ObjectType> *allObjects;

@@ -1,11 +1,6 @@
 ---
-layout: default
+layout: layout
 ---
 
-<link rel="stylesheet" type="text/css" href="{{ "/assets/css/article.css" | prepend: site.baseurl }}">
-
-<div class="page-wrapper">
-    <div class="container--text">
-        {{ content }}
-    </div>
-</div>
+{% assign __ = site.data.languages[site.language] %}
+{% include page.html %}
