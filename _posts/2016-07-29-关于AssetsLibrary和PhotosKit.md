@@ -5,7 +5,6 @@ date:       2016-07-29 17:48
 excerpt:    随着iOS不断的升级，苹果逐步放弃了AssetsLibrary，提供了新的框架Photos。本文粗略的对比了下AssetsLibrary和PhotosKit...
 categories: iOS
 tags:  Objective-c
-post-card-type: image
 ---
 ---
 随着iOS不断的升级，苹果逐步放弃了AssetsLibrary，提供了新的框架Photos。

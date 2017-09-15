@@ -2,7 +2,6 @@
 layout:         post
 title:          iOS 泛型（Lightweight Generice）的使用
 subtitle:       Lightweight Generice
-card-image:  
 location:  北京 中国   
 date:           2016-04-27 21:30:00
 categories: iOS
