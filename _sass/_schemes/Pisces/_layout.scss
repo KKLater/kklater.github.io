@@ -12,7 +12,7 @@
 }
 
 .header-inner {
-  position: fixed;
+  position: absolute;
   top: 0;
   overflow: hidden;
   padding: 0;
@@ -128,7 +128,7 @@
   }
 }
 .sidebar-position-left {
-  .header-inner {/* left: 0;*/ }
+  .header-inner { left: 0; }
   .content-wrap { float: right; }
   .sidebar { float: left; }
 
