@@ -128,7 +128,10 @@
   }
 }
 .sidebar-position-left {
-  .header-inner { left: 0; }
+  .header-inner { 
+    /*left: 0; */
+    position: fixed;
+    }
   .content-wrap { float: right; }
   .sidebar { float: left; }
 
