@@ -7,10 +7,3 @@ categories: CC
 tags:  Swift
 ---
 
-##drafakjshdkjahskkkasd
-askjdakjsjd
-aklsldkal
-laksldka
-
-laksmdlkallaksld
-

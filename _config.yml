@@ -123,7 +123,7 @@ menu:
   tags: /tags/
   archives: /archives/
   about: /about/
-  sitemap: /sitemap.xml
+  # sitemap: /sitemap.xml
 #   commonweal: /404.html
 
 
@@ -140,8 +140,8 @@ menu_icons:
   tags: tags
   archives: archive
   about: user
-  schedule: calendar
   sitemap: sitemap
+  schedule: calendar
   commonweal: heartbeat
 
 
@@ -558,7 +558,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: true
+  enable: false
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
