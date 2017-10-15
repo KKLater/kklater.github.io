@@ -1,9 +1,10 @@
+    	{% if site.youyan.enable and site.youyan.uid %}
+
   <div class="comments" id="comments">
-  	{% if site.youyan.enable and site.youyan.uid %}
   	<div id="uyan_frame"></div>
-  	{% endif %}
  
   </div>
+  	{% endif %}
 
   {% if site.gitment.enable %}
   {% include third/gitment.html %}
