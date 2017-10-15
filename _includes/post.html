@@ -76,7 +76,9 @@
 	
 	{% if page.categories.first %}
 	<div class="uk-card uk-card-default uk-card-body ">
-		<h2 class="uk-margin-small-top">相关文章：</h2>
+		<!-- <h2 class="uk-margin-small-top">相关文章：</h2> -->
+		{% assign card_title="相关文章：" %}
+		{% include common/card_title.html %}
 
 		{% for cat in site.categories %}
 
@@ -94,6 +96,8 @@
 	</div>
 	{% endif %}
 	<div class="uk-card uk-card-default uk-card-body">
+		{% assign card_title="作者：" %}
+		{% include common/card_title.html %}
 		<div>
 			<div class="uk-margin-remove-left uk-margin-small-top" uk-grid>
 
@@ -110,7 +114,10 @@
 
 
 	</div>
+
 	<div class="uk-card uk-card-default uk-card-body">
+		{% assign card_title="评论：" %}
+		{% include common/card_title.html %}
 		{% include third/comments.html %}
 	</div>
 </div>

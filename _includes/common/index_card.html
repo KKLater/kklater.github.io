@@ -15,6 +15,7 @@
      {% endif %}
      <h2 class="uk-text-title uk-margin-small-bottom">
       {% if  post.type == 'link' %}
+      
       <a class="post-title-link uk-link-reset" href="{{ post.link  }}"  target="_blank" itemprop="url">{{ post.title }}</a>
       {% else %}
       <a class="post-title-link uk-link-reset" href="{{ site.url }}{{ post.url }}" itemprop="url">{{ post.title }}</a>
