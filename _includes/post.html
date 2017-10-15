@@ -1,20 +1,21 @@
 
 <link rel="stylesheet" type="text/css" href="{{ "/assets/css/post.css" | prepend: site.baseurl }}">
 <div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
-	
-		{% if page.categories %}
-		
-			<ul class="uk-breadcrumb uk-margin-medium-top"  style="border-left: 3px solid #1AB3F2">
-				<li><a class="uk-margin-small-left" href="{{ cat | prepend: "/category_page/#/" | prepend: site.url }}">{{ page.categories.first }}</a></li>
-				{% for cat in page.categories offset:1 %}
-				<li><a href="{{ cat | prepend: "/category_page/#/" | prepend: site.url }}">{{ cat }}</a></li>
-				{% endfor %}
-			</ul>
+			<article class="uk-card uk-card-default uk-card-body uk-margin-medium-top">
 
+		{% if page.categories %}
+		<div uk-flex class="uk-margin-small-top">
+			<i class="fa fa-book" aria-hidden="true"></i>
+			<a  class="uk-button uk-button-text uk-margin-small-left" href="{{ cat | prepend: "/category_page/#/" | prepend: site.url }}">{{ page.categories.first }}</a>
+			{% for cat in page.categories offset:1 %}
+				<span class="uk-margin-small-left">/</span> <a class="uk-button uk-button-text uk-margin-small-left" href="{{ cat | prepend: "/category_page/#/" | prepend: site.url }}">{{ cat }}</a>
+			{% endfor %}
+		</div>
+			<hr class="uk-margin-remove-top">
 		{% endif %}
-	<div class="uk-width-4-5 uk-margin-small-top">
+	<div class="uk-margin-small-left uk-margin-medium-top">
 	
-		<div class="uk-margin-small-left   uk-text-large  uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >{{ page.title }}</div>
+		<div class="uk-text-large  uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >{{ page.title }}</div>
 
 		<div class=" uk-text-uppercase uk-margin-small-top uk-text-muted" >
 			<div uk-grid>
@@ -27,12 +28,12 @@
 
 			
 
-				{% if page.tag %}
+				{% if page.tags %}
 				<div class="uk-flex  uk-margin-remove-top">
 					<div class="uk-margin-small-right uk-padding-remove-left">
 						<i class="fa fa-tags" aria-hidden="true"></i>
 					</div>
-					{% for tag in page.tag %}
+					{% for tag in page.tags %}
 					{{ tag | strip_html }}
 					{% endfor %}
 				</div>
@@ -64,21 +65,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="uk-width-1-5">
-		<div class="uk-width-auto uk-text-large uk-text-muted" style="font-size: 3em">
-			{% if page.type == 'music' %}
-			<i class="fa fa-music" aria-hidden="true"></i>
-			{% elsif page.type == 'video' %}
-			<i class="fa fa-film" aria-hidden="true"></i>
-			{% elsif page.type == 'code' %}
-			<i class="fa fa-code" aria-hidden="true"></i>
-			{% elsif page.type == 'link' %}
-			<i class="fa fa-link" aria-hidden="true"></i>
-			{% endif %}
-		</div>
+
+	<div class="uk-margin-medium-top">
+				{{ content }}
 	</div>
-		<article class="uk-card uk-card-default uk-card-body">
-		{{ content }}
 		<hr>
 		{% include page_footer.html %}
 	</article>
@@ -96,7 +86,7 @@
 		{% for post in posts limit: 5 %}
 
 		<div class="uk-margin-top-remove uk-margin-small-bottom uk-margin-small-left">
-			<i class="fa fa-pagelines" aria-hidden="true" style="margin-right: 10px"></i><a class="uk-button uk-button-text " href="{{site.url}}{{post.url}}">{{ post.title }}</a>
+			<i class="fa fa-pagelines uk-text-truncate" aria-hidden="true" style="margin-right: 10px"><a class="uk-button uk-button-text uk-margin-small-left" href="{{site.url}}{{post.url}}">{{ post.title }}</a></i>
 		</div>
 		{% endfor %}
 		{% endif %}

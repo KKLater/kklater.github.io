@@ -46,10 +46,10 @@
 
       <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
       {{ post.date | date: "%F"}}
-      {% if post.tag %}
+      {% if post.tags %}
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
 
-      {% for tag in post.tag %}
+      {% for tag in post.tags %}
       {{ tag | strip_html }}
       {% endfor %}
 
