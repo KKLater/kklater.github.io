@@ -44,7 +44,7 @@
 		var className = '#'+collection;
 		var child = $(className)[0].childNodes[1].childNodes;
 		child[0].nodeValue = collection;
-		document.title = "Category: " + collection;
+		document.title = {{ site.title }} + "| Category | " + collection + {{ site.author.name | prepend: "|" }};
 		$(className).css({
 			display: 'block',
 		});	
