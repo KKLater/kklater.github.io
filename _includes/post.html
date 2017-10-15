@@ -6,7 +6,7 @@
 		{% if page.categories %}
 		<div uk-flex class="uk-margin-small-top">
 			<i class="fa fa-book" aria-hidden="true"></i>
-			<a  class="uk-button uk-button-text uk-margin-small-left" href="{{ cat | prepend: "/category_page/#/" | prepend: site.url }}">{{ page.categories.first }}</a>
+			<a  class="uk-button uk-button-text uk-margin-small-left" href="{{ page.categories.first | prepend: "/category_page/#/" | prepend: site.url }}">{{ page.categories.first }}</a>
 			{% for cat in page.categories offset:1 %}
 				<span class="uk-margin-small-left">/</span> <a class="uk-button uk-button-text uk-margin-small-left" href="{{ cat | prepend: "/category_page/#/" | prepend: site.url }}">{{ cat }}</a>
 			{% endfor %}
