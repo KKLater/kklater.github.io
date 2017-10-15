@@ -5,7 +5,23 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/avatar.jpeg">
+  <link rel="icon" type="image/jpeg" href="/assets/avatar.jpeg">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  <meta name="keywords" content="Late, KKLater, 罗树新, lshxin89">
+  <meta name="author" content="Later">
+  <meta name="description" content="{{ site.description }}">
+
+  <meta property="og:site_name" content="Later's Blog -- 池">
+  <meta property="og:url" content="/">
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
   <link rel="stylesheet" type="text/css" href="{{ "/assets/uikit/css/uikit.css" | prepend: site.baseurl }}">
 
@@ -78,24 +94,24 @@
 </head>
 <body>
   <div>
-      {% include header.html %}
-      <div class="uk-offcanvas-content">
+    {% include header.html %}
+    <div class="uk-offcanvas-content">
 
 
-        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
-          <div class="uk-margin-small-left uk-margin-small-right">            
-            {{ content }}
-          </div>
-          {% include footer.html %}
+      <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+        <div class="uk-margin-small-left uk-margin-small-right">            
+          {{ content }}
         </div>
-        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
-          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
-            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
-          </div>
+        {% include footer.html %}
+      </div>
+      <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+        <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+          <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
         </div>
       </div>
     </div>
-    {% include third/lean-analytics.html %}
-  </body>
-  </html>
+  </div>
+  {% include third/lean-analytics.html %}
+</body>
+</html>
 
