@@ -27,7 +27,7 @@ email: lshxin89@example.com
 description: > # this means to ignore newlines until "baseurl:"
   一个写代码的。能简单写点Objective-C、swift、html、css、js。没事还设计点UI，会用点Sketch。
 baseurl: 
-url: http://www.lshxin.com/ # the base hostname & protocol for your site, e.g. http://example.com
+url: http://www.lshxin.com # the base hostname & protocol for your site, e.g. http://example.com
 encoding:     "utf-8"
 twitter_username: jekyllrb
 github_username:  jekyll
@@ -128,7 +128,7 @@ youyan:
 gitment:
   enable: true
   owner: 'KKLater'
-  repo: 'first.github.io'
+  repo: 'kklater.github.io'
   client_id: 'e192fca0611030509c7f'
   client_secret: '9e0c77c8864e46db31d27f0ad08ad787cd221916'
 
