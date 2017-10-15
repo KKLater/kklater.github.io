@@ -20,13 +20,13 @@
 					{% assign path = menu[1] %}
 					{% assign npath = page.path | split: '/' | first | split: '.'| first | prepend: "/"  %}
 					{% if path == "/" and npath == "/index" %}
-					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ path | preapead: site.url }}">{{ name }}</a></li>
 					{% elsif path != "/" and  npath == path %}
 
-					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ path | preapead: site.url }}">{{ name }}</a></li>
 
 					{% else %}
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="{{ path | preapead: site.url }}">{{ name }}</a></li>
 					{% endif %}
 
 
