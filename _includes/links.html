@@ -1,0 +1,24 @@
+	<div class="uk-width-1 uk-child-width-1">
+		<div class="uk-margin-small-left uk-margin-medium-top uk-text-large  uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >LINKS</div>
+		<div class="uk-margin-medium-top uk-card uk-card-default uk-card-body  uk-margin-auto" style="max-width: 640px">
+			<ul class="uk-nav-default" uk-nav>
+
+				{% for alink in site.links %}
+				{% assign titleName = alink[0] %}
+				{% assign links = alink[1] %}
+				<li class="uk-nav-header">{{ titleName }}</li>
+
+				{% for link in links %}
+				{% assign linkname = link[0] %}
+				{% assign linkpath = link[1] %}
+				<li class="uk-margin-small-left">
+					
+					<a href="{{ linkpath }}">- {{ linkname }}</a>
+				</li>
+				
+				{% endfor %}
+				{% endfor %}
+
+			</ul>
+		</div>
+	</div>

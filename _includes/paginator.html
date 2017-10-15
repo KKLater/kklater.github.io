@@ -1,0 +1,29 @@
+
+<ul class="uk-pagination uk-child-width-1-3 uk-text-small">
+	<li>
+		{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path }}"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</a>
+		{% endif %}
+	</li>
+	<li class="uk-text-center">Page: {{ paginator.page }} of {{ paginator.total_pages }}</li>
+	<li class="uk-text-right">
+		{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path }}">Next <span class="uk-margin-small-left" uk-pagination-next></span></a>
+		{% endif %}
+	</li>
+</ul>
+
+
+<!-- <nav class="paginator paginator-space">
+      <div class="paginator_item">
+        {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Previous</a>{% endif %}
+      </div>
+      <div class="paginator_item">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+      </div>
+      <div class="paginator_item">
+        {% if paginator.next_page %}<a href="{{ paginator.next_page_path }}">Next <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>{% endif %}
+      </div>
+  </nav> -->
+
+

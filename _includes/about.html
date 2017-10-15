@@ -1,14 +1,6 @@
-
-<div id="posts" class="posts-expand">
-  {% assign post = page %}
-  {% include _macro/post.html %}
-  <div class="post-spread">
-    {% if site.jiathis %}
-      {% include _partials/share/jiathis.html %}
-    {% elsif site.baidushare %}
-      {% include _partials/share/baidushare.html %}
-    {% elsif site.add_this_id %}
-      {% include _partials/share/add-this.html %}
-       {% endif %}
-  </div>
-</div>
+<div class="uk-width-1 uk-child-width-1">
+    <div class="uk-margin-small-left uk-margin-medium-top uk-text-large  uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >ABOUT</div>
+		<div class="uk-margin-medium-top uk-card uk-card-default uk-card-body  uk-margin-auto" style="max-width: 640px">
+			{{ content }}
+		</div>
+	</div>

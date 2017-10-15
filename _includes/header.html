@@ -1,0 +1,58 @@
+
+<div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
+	<div class=" uk-container uk-container-expand  ls-container" >
+		<nav class="uk-navbar ls-navbar  uk-width-1" style="max-width: 640px">
+			<div class="uk-navbar-left">
+				<a class="uknavbar--item uk-logo ls-logo" href="/">大白的日常</a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s">
+				<ul class="uk-navbar-nav">
+					{% if site.menus  %}
+					{% for menu in site.menus %}
+					{% assign name = menu[0] %}
+					{% assign path = menu[1] %}
+					{% assign npath = page.path | split: '/' | first | split: '.'| first | prepend: "/"  %}
+					{% if path == "/" and npath == "/index" %}
+					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+					{% elsif path != "/" and  npath == path %}
+
+					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+
+					{% else %}
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+					{% endif %}
+
+
+					{% endfor %}
+					{% endif %}
+
+				</ul>
+			</div>
+			<div class="uk-navbar-right uk-hidden@s">
+				<a class="uk-navbar-toggle" style="height: 64px" uk-icon="icon: menu"></a>
+				<div uk-dropdown="mode: click;">
+					<ul class="uk-nav  uk-dropdown-nav">
+						{% if site.menus  %}
+						{% for menu in site.menus %}
+						{% assign name = menu[0] %}
+						{% assign path = menu[1] %}
+
+							{% assign npath = page.path | split: '/' | first | split: '.'| first | prepend: "/"  %}
+					{% if path == "/" and npath == "/index" %}
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_select" href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+					{% elsif path != "/" and  npath == path %}
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_select" href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+
+					{% else %}
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="{{ site.url }}{{ path }}">{{ name }}</a></li>
+					{% endif %}
+
+						{% endfor %}
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+</div>

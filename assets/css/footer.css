@@ -1,0 +1,13 @@
+#footer
+{
+	background: #f5f6f5;
+    border-top: 1px solid #ebebeb;
+    text-align: left;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 40px;
+}
+#wrapper
+{
+	display: block;
+}

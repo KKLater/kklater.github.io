@@ -1,0 +1,153 @@
+/* navigation */
+#nav {
+    width: 100%;
+    margin: 0px auto;
+    background-color: clear;
+    position: relative;
+    height: 64px;
+}
+.navigation 
+{
+	/*list-style-type: none;*/
+	list-style-type: none;
+    right: 0px;
+    position: absolute;
+
+}
+.navigation_back {
+	max-width: 640px;
+	margin: 0px auto;
+}
+
+/* navigationItem */
+
+.nav_item 
+{
+	display: block;
+	position: relative;
+	text-decoration: none;			
+}
+
+.nav_item_list_back 
+{
+/*	float: left;
+	display: inline-flex;
+	max-width: 640px;
+	margin-left:auto;
+	margin-right: auto;
+	max-height: 44px;
+	overflow: scroll;
+	width: 100%;*/
+	max-width: 640px;
+    margin-left: auto;
+    margin-right: 0px;
+    max-height: 100%;
+    overflow: scroll;
+    width: 100%;
+
+}
+
+
+.nav_item_unselect
+{
+	border-bottom:2px solid rgba(0, 0, 0, 0);
+	color: #8f8f8f;
+
+}
+.nav_item_unselect:before
+{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	height: 2px;
+	width: 100%;
+	background: #333333;
+
+	transform: scale(0);
+	transition: all 0.3s;
+}
+.nav_item_unselect:hover:before
+{
+	transform: scale(1);
+	text-decoration: none;
+
+}
+
+.nav_item_unselect:link {
+	color: #8f8f8f;
+	text-decoration: none;
+}
+.nav_item_unselect:visited {
+	color: #8f8f8f;
+	text-decoration: none;
+}
+
+.nav_item_unselect:hover
+{
+	color: #333333;
+	text-decoration: none;
+}
+
+.nav_item_select 
+{
+	color: #333333;
+	border-bottom:2px solid #333333;
+}
+
+.nav_item_select:link {
+	color: #333333;
+	text-decoration: none;
+}
+.nav_item_select:visited {
+	color: #333333;
+	text-decoration: none;
+}
+
+.nav_item_select:hover
+{
+	color: #333333;
+	text-decoration: none;
+}
+
+.nav_title_back
+{
+margin: 0px 10px;
+
+position: absolute;	
+    line-height: initial;
+
+}
+.nav_title 
+{
+	color: #287DE0;
+	font-size: 3em;
+	margin: unset;
+    font-family: Board,"HanziPen SC";
+
+}
+.nav_title:link {
+	text-decoration: none;
+}
+.nav_title:visited {
+	text-decoration: none;
+}
+.nav_title:hover
+{
+	text-decoration: none;
+
+
+}
+/* 头像 */
+.nav_avatar 
+{
+	border-radius:15px;
+	margin-top: 7px;
+	margin-left: 10px;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+
+
+

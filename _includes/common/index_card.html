@@ -1,0 +1,65 @@
+{% if is_index %}
+<div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     {% if post.type == 'music' %}
+     <div class="card-type-mark"><i class="fa fa-music" aria-hidden="true"></i></div>
+     {% elsif post.type == 'video' %}
+     <div class="card-type-mark"><i class="fa fa-film" aria-hidden="true"></i></div>
+     {% elsif post.type == 'code' %}
+     <div class="card-type-mark"><i class="fa fa-code" aria-hidden="true"></i></div>
+     {% elsif post.type == 'link'  %}
+     <div class="card-type-mark"><i class="fa fa-link" aria-hidden="true"></i></div>
+     {% endif %}
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      {% if  post.type == 'link' %}
+      <a class="post-title-link uk-link-reset" href="{{ post.link  }}"  target="_blank" itemprop="url">{{ post.title }}</a>
+      {% else %}
+      <a class="post-title-link uk-link-reset" href="{{ site.url }}{{ post.url }}" itemprop="url">{{ post.title }}</a>
+      {% endif %}
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">{{ post.excerpt | strip_html | truncate: 500 }}</p>
+
+    {% if post.card-image %}
+    <div class="uk-margin-small" style="width: 100%">
+      <img class="ls-card-img" " src="{{ post.card-image }}">
+
+    </div>
+    {% endif %}
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        {% if  post.type == 'link' %}
+        <a class="post-title-link uk-button uk-button-text" href="{{ post.link }}" itemprop="url">Read more</a>
+
+        {% else %}
+        <a class="post-title-link uk-button uk-button-text" href="{{ site.url }}{{ post.url }}" itemprop="url">Read more</a>
+
+        {% endif %}
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      {{ post.date | date: "%F"}}
+      {% if post.tag %}
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+
+      {% for tag in post.tag %}
+      {{ tag | strip_html }}
+      {% endfor %}
+
+      {% endif %}
+      {% if post.location %}
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
+      {{ post.location }}
+      {% endif %}
+    </div>
+    
+  </article>
+</div>
+{% endif %}

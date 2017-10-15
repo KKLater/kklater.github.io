@@ -1,0 +1,14 @@
+{% if is_page_category %}
+<div>
+	<div class="uk-text-mate">
+		{{ post.date | date: "%F"}}
+	</div>
+	<div>
+		{{ name }}
+	</div>
+	<div>
+		{{ post.title }}
+	</div>
+
+</div>
+{% endif %}

@@ -1,86 +1,101 @@
-<!doctype html>
-{% include _blocks/title.html %}
-{% include _blocks/page_class.html %}
-{% include _blocks/sidebar.html %}
-{% include _blocks/script_extra.html %}
+<!DOCTYPE html>
+<html lang="zh">
 
-{% assign html_class = 'theme-next ' | append: site.scheme %}
-{% if site.use_motion %}
-  {% assign html_class = html_class | append: ' use-motion' %}
-{% endif %}
-
-<html class="{{ html_class | downcase }}" lang="{{ site.language }}">
 <head>
-  {% include _partials/head.html %}
-  <title>{{ title }}</title>
-  {% include _third-party/analytics/index.html %}
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/uikit/css/uikit.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/theme.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/header.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/header.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/footer.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/navigation.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/css/paginator.css" | prepend: site.baseurl }}">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="{{ "/assets/highlight/styles/tomorrow-night.css" | prepend: site.baseurl }}">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" {{ "/assets/highlight/highlight.pack.js" | prepend: site.baseurl }} "></script>
+
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="{{ "/assets/js/jquery-3.2.1.min.js" | prepend: site.baseurl }}"></script>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid={{ site.youyan_uid }}"></script>
+
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+  window.onscroll =  function()
+  {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+    var height = $(document).scrollTop(); 
+
+
+    if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+     $('.scroll-top-button').addClass('uk-visible');
+   } else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+  }   
+}
+</script>
 </head>
+<body>
+  <div>
+      {% include header.html %}
+      <div class="uk-offcanvas-content">
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang | default: page.language | default: site.language }}">
 
-  {% assign container_class = "container " %}
-  {% if site.sidebar.position %}
-    {% assign container_class = container_class | append: 'sidebar-position-' | append: site.sidebar.position %}
-  {% endif %}
-
-  <div class="{{ container_class }} {{ page_class }} ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> {% include _partials/header.html %} </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
+        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+          <div class="uk-margin-small-left uk-margin-small-right">            
             {{ content }}
           </div>
-          {% include _third-party/duoshuo-hot-articles.html %}
-          {% include _partials/comments.html %}
+          {% include footer.html %}
         </div>
-        {% if site.sidebar.display != 'remove' %}
-          {{ sidebar }}
-        {% endif %}
+        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
+    {% include third/lean-analytics.html %}
+  </body>
+  </html>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        {% include _partials/footer.html %}
-        {% include _third-party/analytics/busuanzi-counter.html %}
-        {{ footer }}
-      </div>
-    </footer>
-
-    {% unless site.sidebar.b2t %}
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        {% if site.sidebar.scrollpercent %}
-          <span id="scrollpercent"><span>0</span>%</span>
-        {% endif %}
-      </div>
-    {% endunless %}
-
-  </div>
-
-  {% include _scripts/vendors.html %}
-  {% include _scripts/commons.html %}
-
-  {% assign scheme_script = '_scripts/schemes/' | append: site.scheme | downcase | append: '.html' %}
-  {% include {{ scheme_script }} %}
-
-  {{ script_extra }}
-
-  {% include _scripts/boostrap.html %}
-
-  {% include _third-party/comments/index.html %}
-  {% include _third-party/search/index.html %}
-  {% include _third-party/analytics/lean-analytics.html %}
-  {% include _third-party/seo/baidu-push.html %}
-  {% include _third-party/rating.html %}
-  {% include _third-party/mathjax.html %}
-  {% include _third-party/scroll-cookie.html %}
-  {% include _third-party/exturl.html %}
-</body>
-</html>

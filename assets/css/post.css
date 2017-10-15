@@ -1,0 +1,56 @@
+
+h1, h2, h3, h4, h5, h6
+{
+        margin-top: 20px;
+        margin-bottom: 10px;
+}
+p, pre, ul, ol,  blockquote 
+{
+    margin-top: 0;
+    margin-bottom: 10px;
+
+}
+/*
+ *  blockquote
+ */
+ blockquote {
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-left-color: #1AB3F2;
+    background-color: #E8E8E8;
+
+} 
+blockquote p {
+    margin: 15px;
+    font-size: 0.8em;
+}
+blockquote p:last-of-type {
+    margin: 15px;
+}
+/*
+ * code
+ */
+ code.highlighter-rouge
+ {
+    color: #1AB3F2;
+}
+
+div.highlighter-rouge>pre.highlight
+{
+    padding: 0;
+}
+
+/*
+ * table
+ */
+
+ table {   
+    border-collapse: collapse;   
+    border: none;   
+}   
+table>tbody th {
+    background-color: #fafafa;
+}
+table>tbody td, th {   
+    border: solid #E8E8E8 1px;   
+}  

@@ -4,7 +4,7 @@ title:           如何优雅的书写CocoaPocds配置文件.podspec和.podfile
 subtitle:       
 location:  北京 中国   
 date:           2016.10.12 10:14
-categories: CocoaPods
+categories: CocoaPods iOS
 tags:  CocoaPods
 excerpt:  一直以来，`CocoaPods`都没有提供方便书写`podspec`配置文件的工具，`podfile`文件书写工具`CocoaPods.App`也是近期才刚刚出现不久。在没有代码提示，忘记关键词，书写错误，格式错误等等问题比比皆是的情况下，我们该如何“优雅”的书写`CocoaPods`的配置文件呢？
 ---

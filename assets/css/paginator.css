@@ -1,0 +1,28 @@
+.paginator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.1rem;
+  max-width: 640px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.paginator-space {
+  justify-content: space-between;
+}
+
+
+.paginator_item {
+  color: #4A4A4A;
+
+}
+.paginator_item a {
+    text-decoration: none;
+    color: #4A4A4A;
+}
+.paginator_item a:hover
+{
+   color: #1A1A1A;
+      text-shadow: 0 0 4px #4A4A4A;
+      transition: all .5s ease-in;
+}

@@ -1,11 +1,23 @@
-{% assign posts = site.posts %}
-{% if site.paginate > 0 %}{% assign posts = paginator.posts %}{% endif %}
 
-<section id="posts" class="posts-expand">
-  {% for post in posts %}
+<link rel="stylesheet" type="text/css" href="{{ "/assets/css/post_list.css" | prepend: site.baseurl }}">
+
+
+<div  class="uk-width-1 uk-child-width-1">
+  <div  class="uk-margin-small-left uk-margin-medium-top uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >POST</div>
+
+
+
+  {% for post in paginator.posts %}
+
     {% assign is_index = true %}
-    {% include _macro/post.html %}
-  {% endfor %}
-</section>
+   {% include common/index_card.html %}
+  
+{% endfor %}
 
-{% include _partials/pagination.html %}
+<div class="uk-padding-small">
+  <div class="uk-width-1 post_list_paginator_li uk-margin-auto" style="max-width: 640px" >
+   {% include paginator.html %}
+ </div>
+</div>
+</div>
+
