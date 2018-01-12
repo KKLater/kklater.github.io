@@ -1,6 +1,7 @@
 ---
 layout:         post
 title:           如何优雅的书写CocoaPocds配置文件.podspec和.podfile
+card-image: http://ouo0w16s7.bkt.clouddn.com/cocoapods%20guides.png?e=1515744001&token=X-k_MFo98a0VybdWmejDMbKtt0VLy2zl6vAXUB4r:5yBOJS5fvCkMLtoXus9pJKL_Wy8
 subtitle:       
 location:  北京 中国   
 date:           2016.10.12 10:14

@@ -1,6 +1,7 @@
 ---
 layout:     post
-title:      "关于AssetsLibrary和PhotosKit"
+card-image: http://ouo0w16s7.bkt.clouddn.com/Photos%20vc%20AssetsLibrary.png?e=1515744603&token=X-k_MFo98a0VybdWmejDMbKtt0VLy2zl6vAXUB4r:sxnupQp12iz_C08CrMe99ai9Erw
+title:   关于AssetsLibrary和PhotosKit
 date:       2016-07-29 17:48
 excerpt:    随着iOS不断的升级，苹果逐步放弃了AssetsLibrary，提供了新的框架Photos。本文粗略的对比了下AssetsLibrary和PhotosKit...
 categories: iOS
