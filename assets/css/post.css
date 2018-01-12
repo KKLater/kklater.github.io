@@ -14,14 +14,18 @@ p, pre, ul, ol,  blockquote
  *  blockquote
  */
  blockquote {
+    padding-top: 3px;
+    padding-bottom: 3px;
     border-left-width: 3px;
     border-left-style: solid;
     border-left-color: #1AB3F2;
     background-color: #E8E8E8;
 
+
 } 
 blockquote p {
     margin: 15px;
+    font-style: inherit;
     font-size: 0.8em;
 }
 blockquote p:last-of-type {
