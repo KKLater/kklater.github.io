@@ -15,11 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 # 
 # About blog
-title: 池
+title: 蛮小刀
 
 # About Author
 author: 
-  name: Later
+  name: 蛮小刀
   info: 一个写代码的。能简单写点Objective-C、swift、html、css、js。没事还设计点UI，会用点Sketch。
 avatar: /assets/avatar.jpeg
 # avatar: http://ouo0w16s7.bkt.clouddn.com/IMG_0754.JPG?e=1505118402&token=tYezop22TZHJ2SRLGu2c2pc_DIsOrZZ3JfZjeV5-:c2MkMIWAfzw5pPmwPci1MjBW0u4
