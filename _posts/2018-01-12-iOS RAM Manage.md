@@ -3,7 +3,7 @@ layout:         post
 title:          iOS 内存管理分析
 subtitle:       
 location:  北京 中国   
-date:           2018-01-12 11:00:00
+date:           2018-01-12 13:55:00
 categories: iOS
 tags:  iOS
 excerpt:  OC 提供两种内存管理的方式，分别是 MRC 和 ARC。
