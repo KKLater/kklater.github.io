@@ -58,6 +58,8 @@ table>tbody td, th {
 }  
 img {
     padding: 10px;
+    margin-bottom: 20px;
+    margin-top:20px;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     background: #fff;
