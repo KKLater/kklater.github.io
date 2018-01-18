@@ -99,7 +99,7 @@ CFRunLoopGetMain(); // 获得主线程的RunLoop对象
 
 ### 4.Runloop 逻辑
 
-![](./_image/Runloop.png)
+![](https://raw.githubusercontent.com/KKLater/kklater.github.io/master/_posts/_image/Runloop.png)
 
 **RunLoop 处理逻辑：**
 
