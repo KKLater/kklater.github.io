@@ -9,7 +9,7 @@ tags:  iOS Cocoapods
 excerpt:  pod 导入 'openssl-ios-bitcode' 失败，导致项目不能正常运行
 ---
 
-##问题描述
+## 问题描述
 
 项目的 Podfile 文件中包含有 'pod 'openssl-ios-bitcode', '~> 1.0.212'' ， ’pod update —no-repo-update'，报错。
 
