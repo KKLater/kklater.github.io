@@ -131,8 +131,8 @@ gitment:
   enable: true
   owner: 'KKLater'
   repo: 'kklater.github.io'
-  client_id: 'e192fca0611030509c7f'
-  client_secret: '9e0c77c8864e46db31d27f0ad08ad787cd221916'
+  client_id: '58dbc3aa56f536d29aef'
+  client_secret: '12dc860c47a9dec1efe5bcf1fff554d6d9271e49'
 
 
 permalink: pretty
