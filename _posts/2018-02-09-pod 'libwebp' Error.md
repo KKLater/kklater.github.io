@@ -8,7 +8,7 @@ categories: iOS
 tags:  iOS Cocoapods
 excerpt:  pod 'libwebp'失败，翻墙无解，解决方案
 ---
-![pod 'libwebp' Error!](http://upload-images.jianshu.io/upload_images/312211-66d243163b47bbf1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-18-25.jpg)
 
 在使用SDWebImage加载webp格式图片时，需要引入库SDWebImage/WebP。
 
@@ -23,13 +23,14 @@ Podfile 文件需要导入：
 ```
 但是执行 `pod install` 命令后，你会发现，报错了。
 错误警告：
-![libwebp错误](http://upload-images.jianshu.io/upload_images/312211-83d7576253a30045.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-16-08.jpg)
 what?
 why?
 
 分析原因：
 我们通过查看SDWebImage 的 `.podspec` pod 配置文件，可知道 `SDWebImage` 支持 `webp` 格式图片是依赖于其 `Webp` 子库，而子库进一步依赖于 `libwebp` 库。
-![SDWebImage/WebP 依赖于 libwebp 库](http://upload-images.jianshu.io/upload_images/312211-d2f41f5f329cfa7e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-16-22.jpg)
+
 再看下 `libwebp` 的 `.podspec` pod配置文件：
 ```json
 {
@@ -138,7 +139,7 @@ why?
 那咋解决呢？
 
 我们知道 `libwebp` 是个库，那万能的 `github` 有没有其镜像库呢？试着在 `github` 搜了下，还真是惊喜不断，果然有这样一个库。
-![](http://upload-images.jianshu.io/upload_images/312211-4ebadad1f84883a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-18-07.jpg)
 
 因为 `pod` 在执行 `pod install` 时，是根据其 `source` 中 `git` 地址源来加载源代码的，我们在 `google` 拿不到源代码，那是不是可以试着用 `git` 镜像地址替换掉其`podspec` 中的 `google` 源地址的方法，让`pod` 执行 `pod install`  的时候，从 `git` 镜像来拉去 `libwebp` 源代码呢？
 
@@ -148,25 +149,25 @@ why?
 
 操作步骤：
 1、在终端执行 `pod repo` 获取到 `cocoapods` 本地库地址。
-![pod 本地库](http://upload-images.jianshu.io/upload_images/312211-0eae2b9adcb8ada1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-16-38.jpg)
 
 2、Findle 右键，前往我们获取到的本地`pod`仓库地址
-![](http://upload-images.jianshu.io/upload_images/312211-50d81242be2fd491.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-16-50.jpg)
 
-![](http://upload-images.jianshu.io/upload_images/312211-8f307900b42c675b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-17-01.jpg)
 
 3、仓库内搜索 `libwebp`，并打开搜索到的文件夹。
 
-![](http://upload-images.jianshu.io/upload_images/312211-d9a45c1b76572cff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-17-12.jpg)
 
 4、打开错误版本号对应的 `podspec` 文件
-![错误版本号](http://upload-images.jianshu.io/upload_images/312211-3f207eaf29102fdb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-17-24.jpg)
 
-![](http://upload-images.jianshu.io/upload_images/312211-2dce736e2cd0c757.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-17-35.jpg)
 
 5、找到对应 `source - git` 地址，替换为 `https://github.com/webmproject/libwebp.git`
 
-![](http://upload-images.jianshu.io/upload_images/312211-0774e1ec582945f5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](./_image/2018-02-09/2018-06-15-10-17-47.jpg)
 
 6、重新执行 `pod install` 等待成功。
 
