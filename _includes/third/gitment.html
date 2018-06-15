@@ -5,6 +5,7 @@
 <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
     var gitment = new Gitment({
+        id: '{{ page.date }}',
         owner: '{{ site.gitment.owner }}',
         repo: '{{ site.gitment.repo }}',
         oauth: {
