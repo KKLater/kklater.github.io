@@ -49,6 +49,7 @@ blockquote p:last-of-type {
 code.highlighter-rouge {
     color: #1AB3F2;
     white-space: inherit;
+    word-break: break-all;
 }
 
 div.highlighter-rouge>pre.highlight {
