@@ -121,9 +121,9 @@ leancloud_visitors:
 
 
 # youyan
-youyan:
-  enable: false
-  uid: 2144594
+# youyan:
+#   enable: false
+#   uid: 2144594
 
 # Gitment
 # link: https://github.com/imsun/gitment

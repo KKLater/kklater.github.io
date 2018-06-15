@@ -1,11 +1,8 @@
+ {% if site.youyan.enable and site.youyan.uid %} {% assign uid = site.youyan.uid %}
 
-  {% if site.youyan.enable and site.youyan.uid %}
-    {% assign uid = site.youyan.uid %}
-
-    <!-- {% if page.comments %} -->
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid={{uid}}"></script>
-      <!-- UY END -->
-    <!-- {% endif %} -->
-  {% endif %}
-
+<!-- {% if page.comments %} -->
+<!-- UY BEGIN -->
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid={{uid}}"></script>
+<!-- UY END -->
+<!-- {% endif %} -->
+{% endif %}
