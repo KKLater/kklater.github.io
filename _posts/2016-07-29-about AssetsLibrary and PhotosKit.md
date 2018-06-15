@@ -37,7 +37,7 @@ tags:  Objective-c
 
 ##### PhotoKit组织结构
 
-![](./_image/2016-07-29/PhotoKit.png)
+![](http://p2qz1unpx.bkt.clouddn.com/PhotoKit.png)
 
 * PHPhotoLibrary：资源库
 * PHAssetCollection：PHCollection 的子类，表示一个相册或者一个时刻，或者是一个「智能相册（系统提供的特定的一系列相册，例如：最近删除，视频列表，收藏等等，如下图所示）
