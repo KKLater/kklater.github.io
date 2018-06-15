@@ -52,7 +52,6 @@ AssetsLibrary获取资源权限：
 
 
 ```objc
-aa
 NSString *tipTextWhenNoPhotosAuthorization; // 提示语
 // 获取当前应用对照片的访问授权状态
 ALAuthorizationStatus authorizationStatus = [ALAssetsLibrary authorizationStatus];
