@@ -50,6 +50,9 @@ code.highlighter-rouge {
     color: #1AB3F2;
     white-space: inherit;
     word-break: break-all;
+    margin: 0 10px 0px 10px;
+    font-size: 0.8em;
+    border: 1px solid #e5e5e5;
 }
 
 div.highlighter-rouge>pre.highlight {
