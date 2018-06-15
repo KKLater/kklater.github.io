@@ -1,19 +1,28 @@
-
-h1, h2, h3, h4, h5, h6
-{
-        margin-top: 20px;
-        margin-bottom: 10px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-p, pre, ul, ol,  blockquote 
-{
+
+p,
+pre,
+ul,
+ol,
+blockquote {
     margin-top: 0;
     margin-bottom: 10px;
-
 }
+
+
 /*
  *  blockquote
  */
- blockquote {
+
+blockquote {
     padding-top: 3px;
     padding-bottom: 3px;
     border-left-width: 3px;
@@ -21,45 +30,55 @@ p, pre, ul, ol,  blockquote
     border-left-color: #1AB3F2;
     background-color: #E8E8E8;
     font-style: inherit;
-} 
+}
+
 blockquote p {
     margin: 15px;
     font-size: 0.8em;
 }
+
 blockquote p:last-of-type {
     margin: 15px;
 }
+
+
 /*
  * code
  */
- code.highlighter-rouge
- {
+
+code.highlighter-rouge {
     color: #1AB3F2;
+    white-space: inherit;
 }
 
-div.highlighter-rouge>pre.highlight
-{
+div.highlighter-rouge>pre.highlight {
     padding: 0;
 }
+
 
 /*
  * table
  */
 
- table {   
-    border-collapse: collapse;   
-    border: none;   
-}   
+table {
+    border-collapse: collapse;
+    border: none;
+    word-break: break-all;
+}
+
 table>tbody th {
     background-color: #fafafa;
 }
-table>tbody td, th {   
-    border: solid #E8E8E8 1px;   
-}  
+
+table>tbody td,
+th {
+    border: solid #E8E8E8 1px;
+}
+
 img {
     padding: 10px;
     margin-bottom: 20px;
-    margin-top:20px;
+    margin-top: 20px;
     border: 1px solid #e5e5e5;
     border-radius: 3px;
     background: #fff;
