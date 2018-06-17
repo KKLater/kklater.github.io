@@ -11,7 +11,7 @@ music163link: http://music.163.com/outchain/player?type=2&id=139774&auto=1&heigh
 
 ## 关于我
 
-平衡态即静态，静态即死亡
+<p style="text-align: center">平衡态即静态，静态即死亡</p>
 
 <!-- 
 嗨，我是罗树新。
@@ -48,4 +48,4 @@ music163link: http://music.163.com/outchain/player?type=2&id=139774&auto=1&heigh
 --- -->
 
 
-<p style="text-align: right">--更新于2017年9月12日</p>
+<!-- <p style="text-align: right">--更新于2017年9月12日</p> -->
