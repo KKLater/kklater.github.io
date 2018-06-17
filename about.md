@@ -11,6 +11,9 @@ music163link: http://music.163.com/outchain/player?type=2&id=139774&auto=1&heigh
 
 ## 关于我
 
+平衡态即静态，静态即死亡
+
+<!-- 
 嗨，我是罗树新。
 
 现于北京，从事互联网开发工作。
@@ -42,7 +45,7 @@ music163link: http://music.163.com/outchain/player?type=2&id=139774&auto=1&heigh
 * 学习Swift
 * 早睡早起多运动，身体健康
 
----
+--- -->
 
 
 <p style="text-align: right">--更新于2017年9月12日</p>
