@@ -145,7 +145,7 @@ leancloud_comment:
   # wavatar:用不同面孔和背景组合生成的头像(根据邮箱或昵称生成)
   # retro:八位像素复古头像(根据邮箱或昵称生成)
   # hide:不显示头像
-  avatar: hide
+  avatar: 'wavatar'
   placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
 
 permalink: pretty
