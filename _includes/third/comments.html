@@ -1,11 +1,7 @@
-    	{% if site.youyan.enable and site.youyan.uid %}
+ {% if site.youyan.enable and site.youyan.uid %}
 
-  <div class="comments" id="comments">
-  	<div id="uyan_frame"></div>
- 
-  </div>
-  	{% endif %}
+<div class="comments" id="comments">
+    <div id="uyan_frame"></div>
 
-  {% if site.gitment.enable %}
-  {% include third/gitment.html %}
-  {% endif %}
+</div>
+{% endif %} {% if site.gitment.enable %} {% include third/gitment.html %} {% endif %} {% if site.leancloud_comment.enable %} {% include third/valine.html %} {% endif %}

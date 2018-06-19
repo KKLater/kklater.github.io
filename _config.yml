@@ -128,11 +128,24 @@ leancloud_visitors:
 # Gitment
 # link: https://github.com/imsun/gitment
 gitment:
-  enable: true
+  enable: false
   owner: 'KKLater'
   repo: 'kklater.github.io'
   client_id: '58dbc3aa56f536d29aef'
   client_secret: '12dc860c47a9dec1efe5bcf1fff554d6d9271e49'
 
+leancloud_comment:
+  enable: true
+  app_id: TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz
+  app_key: FB770fG9JNXEB42O9KEOeFCT
+  # '':Gravatar官方图形,
+  # mm:神秘人(一个灰白头像)
+  # identicon:抽象几何图形(根据邮箱或昵称生成)
+  # monsterid:小怪物
+  # wavatar:用不同面孔和背景组合生成的头像(根据邮箱或昵称生成)
+  # retro:八位像素复古头像(根据邮箱或昵称生成)
+  # hide:不显示头像
+  avatar: hide
+  placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
 
 permalink: pretty
