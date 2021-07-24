@@ -1,0 +1,40 @@
+title: "√3"
+author: "√3"
+description: "Made with <b style=\"color: #f45;\">√3</b>"
+permalink: /:title/
+lang: "cn"
+excerpt_separator: "\n\n\n"
+date_format: "%B %d, %Y"
+icon: 'assets/favicon.png'
+
+# Layout
+
+show_excerpts: true        # show article excerpts on the home page
+show_frame: true           # adds a gray frame to the site
+show_sidebar: false        # show a sidebar instead of the usual header
+minimal: false             # use a dark header
+
+# Menu
+
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {file: "index.html"}
+  - {file: "archive.html"}
+  - {file: "README.md"}
+
+external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
+  - {title: Mail, icon: envelope, url: "mailto:lshxin89@126.com"}
+  - {title: Github, icon: github, url: "https://github.com/KKLater"}
+  - {title: Subscribe, icon: rss, url: "/feed.xml"}
+
+comments:
+#  disqus_shortname: ""    # see https://disqus.com/
+#  isso_domain: ""         # see https://posativ.org/isso/
+  valine_comment:
+      leancloud_appid: 'bJcAoRX1KKMQNGmHxMl9vQMv-gzGzoHsz'
+      leancloud_appkey: 'dFjEB3HHd2E8HgS6sPUDBeUL'
+
+plugins:
+ - jekyll-feed
+#  - jekyll-remote-theme
+
+# remote_theme: niklasbuschmann/contrast@v2.11
