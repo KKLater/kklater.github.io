@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="cn">
-<title>Advanced examples | √3</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="√3">
-<meta name="generator" content="Jekyll v4.2.0">
-<link rel="canonical" href="/advanced-examples/">
-<link rel='icon' href="/assets/favicon.ico" type='image/x-icon'/>
-<link rel="shortcut icon" href="/assets/favicon.ico"/>
-
-
-<link rel="stylesheet" href="/assets/css/frame.css">
-
-<link rel="alternate" href="/feed.xml" type="application/atom+xml" title="√3">
-
-<link rel="stylesheet" href="/assets/katex/katex.min.css">
-<script defer src="/assets/katex/katex.min.js"></script>
-<script defer src="/assets/katex/contrib/auto-render.min.js" onload="renderMathInElement(document.body)"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<header>
-  <a href="/" class="title">√3</a>
-  <nav><a href="/" >首页</a><a href="/archive/" >归档</a><a href="/about/" >关于</a></nav>
-
-</header>
-
-<article>
-  <header>
-  <h1><a href="/advanced-examples/">Advanced examples</a></h1><time datetime="2017-01-01T00:00:00+08:00">January 01, 2017</time>
-</header>
-
-  <p><img src="https://user-images.githubusercontent.com/4943215/55412536-edbba180-5567-11e9-9c70-6d33bca3f8ed.jpg" alt="Swiss Alps" /></p>
+I"/<p><img src="https://user-images.githubusercontent.com/4943215/55412536-edbba180-5567-11e9-9c70-6d33bca3f8ed.jpg" alt="Swiss Alps" /></p>
 
 <h2 id="mathjax">MathJax</h2>
 
@@ -97,36 +53,4 @@
   <iframe style="position: absolute;" src="https://v.qq.com/x/page/r0039e84hh7.html" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-
-  
-  
-    <!-- <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> -->
-    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
-
-    <div id="comment"></div>
-    <script>
-      var valine = new Valine();
-      valine.init({
-        el:'#comment',
-        appId:'bJcAoRX1KKMQNGmHxMl9vQMv-gzGzoHsz',
-        appKey:'dFjEB3HHd2E8HgS6sPUDBeUL',
-        path: '/advanced-examples/',
-        placeholder:'面向未来编程——√3',
-        avatar:'robohash', // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
-        visitor: true,
-        recordIP: true
-      })
-    </script>
-  
-</article>
-
-
-
-<footer>
-  <div>© 2021 Themis, Powered By <b style="color: #f45;">√3</b> | Designed By <b style="color: #f45;">niklasbuschmann</b></div>
-  <nav><a href="mailto:lshxin89@126.com" ><svg aria-label="Mail" class="icon"><use xlink:href="/assets/fontawesome/icons.svg#envelope"></use></svg></a><a href="https://github.com/KKLater" ><svg aria-label="Github" class="icon"><use xlink:href="/assets/fontawesome/icons.svg#github"></use></svg></a><a href="/feed.xml" ><svg aria-label="Subscribe" class="icon"><use xlink:href="/assets/fontawesome/icons.svg#rss"></use></svg></a></nav>
-
-</footer>
-
-
-</html>
+:ET

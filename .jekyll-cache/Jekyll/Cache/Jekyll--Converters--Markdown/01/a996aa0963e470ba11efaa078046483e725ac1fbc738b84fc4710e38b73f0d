@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html lang="cn">
-<title>关于 | √3</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="√3">
-<meta name="generator" content="Jekyll v4.2.0">
-<link rel="canonical" href="/about/">
-<link rel='icon' href="/assets/favicon.ico" type='image/x-icon'/>
-<link rel="shortcut icon" href="/assets/favicon.ico"/>
-
-
-<link rel="stylesheet" href="/assets/css/frame.css">
-
-<link rel="alternate" href="/feed.xml" type="application/atom+xml" title="√3">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<header>
-  <a href="/" class="title">√3</a>
-  <nav><a href="/" >首页</a><a href="/archive/" >归档</a><a href="/about/" class="selected">关于</a></nav>
-
-</header>
-
-<article>
-  <header><h1><a href="/about/">关于</a></h1></header>
-  <h2 id="installation">Installation</h2>
+I"�<h2 id="installation">Installation</h2>
 
 <p>Just fork this <a href="https://github.com/niklasbuschmann/contrast">repository</a> and adjust the <code class="language-plaintext highlighter-rouge">_config.yml</code> to use with <a href="https://pages.github.com/">Github Pages</a> and your page is done.</p>
 
@@ -130,16 +93,4 @@
 <p><img src="https://user-images.githubusercontent.com/4943215/109431832-b6cac080-7a08-11eb-9c5e-a058680c23a1.png" alt="screenshot" /></p>
 
 <p><img src="https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png" alt="screenshot" /></p>
-
-</article>
-
-
-
-<footer>
-  <div>© 2021 Themis, Powered By <b style="color: #f45;">√3</b> | Designed By <b style="color: #f45;">niklasbuschmann</b></div>
-  <nav><a href="mailto:lshxin89@126.com" ><svg aria-label="Mail" class="icon"><use xlink:href="/assets/fontawesome/icons.svg#envelope"></use></svg></a><a href="https://github.com/KKLater" ><svg aria-label="Github" class="icon"><use xlink:href="/assets/fontawesome/icons.svg#github"></use></svg></a><a href="/feed.xml" ><svg aria-label="Subscribe" class="icon"><use xlink:href="/assets/fontawesome/icons.svg#rss"></use></svg></a></nav>
-
-</footer>
-
-
-</html>
+:ET

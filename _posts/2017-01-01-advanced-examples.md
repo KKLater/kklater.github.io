@@ -44,7 +44,9 @@ static void asyncEnabled(Dict* args, void* vAdmin, String* txid, struct Allocato
 
 With the `jekyll-gist` plugin, which is preinstalled on Github Pages, you can embed gists simply by using the `gist` command:
 
+```js
 <script src="https://gist.github.com/5555251.js?file=gist.md"></script>
+```
 
 ## Images
 
@@ -60,4 +62,4 @@ A wrapper `div` with the class `large` can be used to increase the width of an i
 
 You can also embed a lot of stuff, for example from YouTube, using the `embed.html` include.
 
-{% include embed.html url="https://www.youtube.com/embed/_C0A5zX-iqM" %}
+{% include embed.html url="https://v.qq.com/x/page/r0039e84hh7.html" %}
