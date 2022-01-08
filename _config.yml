@@ -1,6 +1,6 @@
 title: "√3"
 author: "√3"
-description: "© 2021 Themis, Powered By <b style=\"color: #f45;\">√3</b> | Designed By <b style=\"color: #f45;\">niklasbuschmann</b>"
+description: "© 2022 Themis, Powered By <b style=\"color: #f45;\">√3</b> | Designed By <b style=\"color: #f45;\">niklasbuschmann</b>"
 permalink: /:title/
 lang: "cn"
 excerpt_separator: "\n\n\n"
@@ -11,7 +11,7 @@ icon: 'assets/favicon.png'
 
 show_excerpts: true        # show article excerpts on the home page
 show_frame: true           # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
+show_sidebar: true        # show a sidebar instead of the usual header
 minimal: false             # use a dark header
 
 # Menu
@@ -29,9 +29,12 @@ external:                  # shows a footer with social links - for available ic
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
 #  isso_domain: ""         # see https://posativ.org/isso/
-  valine_comment:
-      leancloud_appid: 'bJcAoRX1KKMQNGmHxMl9vQMv-gzGzoHsz'
-      leancloud_appkey: 'dFjEB3HHd2E8HgS6sPUDBeUL'
+  # valine_comment:
+  #     leancloud_appid: 'bJcAoRX1KKMQNGmHxMl9vQMv-gzGzoHsz'
+  #     leancloud_appkey: 'dFjEB3HHd2E8HgS6sPUDBeUL'
 
 plugins:
  - jekyll-feed
+ - jekyll-remote-theme
+
+remote_theme: niklasbuschmann/contrast@v2.11
