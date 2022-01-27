@@ -14,7 +14,7 @@ paginate_path: "/page/:num/"
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 highlighter: rouge
 markdown: kramdown
-#googlaAnalyticsID : UA-98628575-1
+googlaAnalyticsID : UA-98628575-1
 comments :
   gitalk :
     clientID : e253949f731657ca7a95
