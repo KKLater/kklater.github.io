@@ -21,3 +21,4 @@ comments :
     repo : kklater.github.io
     owner : KKLater
     admin : KKLater
+    createIssueManually: true
