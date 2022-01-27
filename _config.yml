@@ -20,5 +20,5 @@ comments :
     clientSecret : 22687dd4fe2cbc1d77ff8c6b8dc801e134c8757c
     repo : kklater.github.io
     owner : KKLater
-    admin : KKLater
+    admin : [KKLater]
     createIssueManually: true
