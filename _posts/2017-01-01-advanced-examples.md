@@ -1,7 +1,8 @@
 ---
-title:  "Advanced examples"
-mathjax: true
 layout: post
+title:  "Advanced examples"
+date: 2019-03-08 20:30:00 +0800
+mathjax: true
 categories: media
 ---
 
