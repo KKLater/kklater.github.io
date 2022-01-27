@@ -16,8 +16,8 @@ highlighter: rouge
 markdown: kramdown
 comments :
   gitalk :
-    clientID : e253949f731657ca7a95
-    clientSecret : 6e3a2c00a320b2628c4e84ad4ae0a30f60f2c826
+    clientID : c9beaad838ff184bb1fe
+    clientSecret : 22687dd4fe2cbc1d77ff8c6b8dc801e134c8757c
     repo : gitalk-comment
-    owner : Later
-    admin : Later
+    owner : KKLater
+    admin : KKLater
