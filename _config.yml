@@ -19,5 +19,5 @@ comments :
     clientID : e253949f731657ca7a95
     clientSecret : 6e3a2c00a320b2628c4e84ad4ae0a30f60f2c826
     repo : gitalk-comment
-    owner : KKLater
-    admin : KKLater
+    owner : Later
+    admin : Later
