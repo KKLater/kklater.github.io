@@ -1,40 +1,24 @@
-title: "√3"
-author: "√3"
-description: "© 2022 Themis, Powered By <b style=\"color: #f45;\">√3</b> | Designed By <b style=\"color: #f45;\">niklasbuschmann</b>"
-permalink: /:title/
-lang: "cn"
-excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
-icon: 'assets/favicon.png'
-
-# Layout
-
-show_excerpts: true        # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
-show_sidebar: false        # show a sidebar instead of the usual header
-minimal: false             # use a dark header
-
-# Menu
-
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "archive.html"}
-  - {file: "README.md"}
-
-external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:lshxin89@126.com"}
-  - {title: Github, icon: github, url: "https://github.com/KKLater"}
-  - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
-comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
-  # valine_comment:
-  #     leancloud_appid: 'bJcAoRX1KKMQNGmHxMl9vQMv-gzGzoHsz'
-  #     leancloud_appkey: 'dFjEB3HHd2E8HgS6sPUDBeUL'
-
-plugins:
- - jekyll-feed
- - jekyll-remote-theme
-
-remote_theme: niklasbuschmann/contrast@v2.11
+name: Ron Blog
+email: lshxin89@126.com
+author: Ron
+url: https://github.com/KKLater
+resume_site: https://github.com/KKLater
+baseurl: 
+description: 技术是认知的工具
+github_username: KKLater
+github: https://github.com/KKLater
+plugins: [jekyll-paginate]
+permalink: /:year-:month-:day-:title
+paginate: 12
+paginate_path: "/page/:num/"
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+highlighter: rouge
+markdown: kramdown
+#googlaAnalyticsID : UA-98628575-1
+comments :
+  gitalk :
+    clientID : e253949f731657ca7a95
+    clientSecret : 6e3a2c00a320b2628c4e84ad4ae0a30f60f2c826
+    repo : kklater.github.io
+    owner : Ron
+    admin : Ron
