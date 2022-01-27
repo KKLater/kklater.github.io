@@ -18,6 +18,6 @@ comments :
   gitalk :
     clientID : c9beaad838ff184bb1fe
     clientSecret : 22687dd4fe2cbc1d77ff8c6b8dc801e134c8757c
-    repo : gitalk-comment
+    repo : kklater.github.io
     owner : KKLater
     admin : KKLater
