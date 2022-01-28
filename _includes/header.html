@@ -1,19 +1,25 @@
-<header id="header" class="header bg-white">
-    <div class="navbar-container">
-        <a href="{{ '/' | prepend: site.baseurl }}" class="navbar-logo">
-            <img src="{{ '/style/image/logo.png' | prepend: site.baseurl }}" alt="{{ site.name }}" />
-            <span>{{ site.name }}</span>
-        </a>
-        <div class="navbar-menu">
-            <a href="{{ '/archives' | prepend: site.baseurl }}">Archives</a>
-            <a href="{{ '/about' | prepend: site.baseurl }}">About</a>
+<header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+  <div class="container">
+    <div class="header__inner">
+      <a class="header__logo" href="{{ '/' | relative_url }}">
+        <div class="header__logo--container">
+          {% include logo.svg %}
         </div>
-        <div class="navbar-mobile-menu" onclick="">
-            <span class="icon-menu cross"><span class="middle"></span></span>
-            <ul>
-                <li><a href="{{ '/archives' | prepend: site.baseurl }}">Archives</a></li>
-                <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
-            </ul>
+      </a>
+      <nav class="header__links">
+        <div class="container header__links-wrapper">
+          <a class="header__link" href="{{ '/' | relative_url }}" itemprop="url"><span itemprop="name">Home</span></a>
+          <a class="header__link" href="{{ '/about' | relative_url }}" itemprop="url"><span itemprop="name">About</span></a>
+          <a class="header__link" href="{{ '/contact' | relative_url }}" itemprop="url">
+            <span itemprop="name">Contact</span>
+          </a>
         </div>
+      </nav>
+      <div class="header__toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+  </div>
 </header>

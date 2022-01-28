@@ -1,19 +1,54 @@
-name: KKLater Blog
-email: lshxin89@126.com
+title: 非鱼
 author: KKLater
-url: https://www.themis.wiki
-resume_site: https://www.themis.wiki
-baseurl: 
-description: 技术是认知的工具
-github_username: KKLater
-github: https://github.com/KKLater
-plugins: [jekyll-paginate]
-permalink: /:year-:month-:day-:title
-paginate: 12
-paginate_path: "/page/:num/"
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
-highlighter: rouge
+email: lshxin89@126.com
+description: > 
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://www.themis.wiki" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jan_czizikow # replace with your_twitter_username or comment to remove link from footer
+github_username:  KKLater # replace with your_github_username or comment to remove link from footer
+# instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
+social:
+  name: 非鱼
+  links:
+    - https://twitter.com/BenBalter
+    - https://www.facebook.com/ben.balter
+    - https://www.linkedin.com/in/BenBalter
+    - https://plus.google.com/+BenBalter
+    - https://github.com/benbalter
+    - https://keybase.io/benbalter
+
+# disqus:
+  # shortname: janczizikow # to enable comments replace with your_disqus_shortname
+
+# Build settings
 markdown: kramdown
+highlighter: rouge # or pygments or null
+theme: jekyll-sleek
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - npm-debug.log
+  - gulpfile.js
+  - sleek.png
+
+include: ['_pages']
+permalink: /:title/
+
+compress_html:
+  clippings: all
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 comments :
   gitalk :
     clientID : c9beaad838ff184bb1fe
